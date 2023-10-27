@@ -1,0 +1,106 @@
+<div class="profile-container">
+    <div class="profile-picture-container">
+        <div class="upload-picture-container">
+            <div class="upload-picture-info">
+                <div class="upload-picture-title">
+                    <p class="profile-title">{{currentUser.firstName}} {{currentUser.lastName}}</p>
+                    <p class="profile-information">{{currentUser.country}}, {{currentUser.city}}</p>
+                </div>
+                <div class="upload-picture-img">
+                    <img [src]="currentUser.avatarURL" class="profile-image">
+                </div>
+            </div>
+            <div class="upload-picture-actions">
+                <input #file type="file" class="upload-btn" (change)="userPhotoUpdate(file.files)"> 
+                <button class="remove-btn" (click)="removeAvatar()">Remove Picture</button>
+            </div>
+        </div>
+    </div>
+    <div class="profile-info-container">
+        <div class="basic-profile-container">
+            <div class="basic-info-container">
+                <span class="basic-title">Basic Profile</span>
+                <span class="basic-text">The information can be edited from yuor profile page</span>
+            </div> 
+            <form class="profile-form-container" [formGroup]="editForm">
+                <mat-form-field appearance="outline" class="profile-input">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="profile-input">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput formControlName="lastName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="profile-input">
+                    <mat-label>Email address</mat-label>
+                    <input type="text" matInput formControlName="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="profile-input">
+                    <mat-label>Phone number</mat-label>
+                    <input type="text" matInput formControlName="phone" mask="(000)-000-00-00">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="profile-input">
+                    <mat-label>Country</mat-label>
+                    <input type="text" matInput formControlName="country">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="profile-input">
+                    <mat-label>City</mat-label>
+                    <input type="text" matInput formControlName="city">
+                </mat-form-field>
+            </form>
+            <mat-divider></mat-divider>
+            <button class="save-btn" (click)="profileEdit()" [disabled]="!editForm.valid" [ngClass]="editForm.valid ? 'save-btn' : 'save-disable-btn'">Save settings</button>
+        </div>
+        <div class="notifications-container">
+            <div class="basic-info-container">
+                <span class="basic-title">Notifications</span>
+                <span class="basic-text">Mange the notifications emailing</span>
+                <mat-divider></mat-divider>
+            </div> 
+            <form action="" class="profile-checkbox-form-container" [formGroup]="notificationForm">
+                <div class="notifications-block">
+                    <span class="notifications-title">Notifications</span>
+                    <label class="label-container">
+                        <input type="checkbox" class="checkbox-input" formControlName="notificationsEmail">
+                        <span class="label-title">Email</span>
+                    </label>
+                    <label class="label-container">
+                        <input type="checkbox" class="checkbox-input" formControlName="notificationsPush">
+                        <span class="label-title">
+                            Push notifications<br>
+                            <span class="sub-label-title">For your mobile or tablet device</span>
+                        </span>
+                    </label>
+                    <label class="label-container">
+                        <input type="checkbox" class="checkbox-input" formControlName="notificationsText">
+                        <span class="label-title">Text Messages</span>
+                    </label>
+                    <label class="label-container">
+                        <input type="checkbox" class="checkbox-input" formControlName="notificationsPhone">
+                        <span class="label-title">Phone Calls</span>
+                    </label>
+                </div>
+                <div class="messages-block">
+                    <span class="messages-title">Messages</span>
+                    <label class="label-container">
+                        <input type="checkbox" class="checkbox-input" formControlName="messagesEmail">
+                        <span class="label-title">Email</span>
+                    </label>
+                    <label class="label-container">
+                        <input type="checkbox" class="checkbox-input" formControlName="messagesPush">
+                        <span class="label-title">
+                            Push notifications<br>
+                            <span class="sub-label-title">For your mobile or tablet device</span>
+                        </span>
+                    </label>
+                    <label class="label-container">
+                        <input type="checkbox" class="checkbox-input" formControlName="messagesText">
+                        <span class="label-title">Text Messages</span>
+                    </label>
+                </div>
+            </form>
+            <mat-divider></mat-divider>
+            <button class="save-btn" (click)="notificationsSettings()">Save settings</button>
+        </div>
+    </div>
+</div>

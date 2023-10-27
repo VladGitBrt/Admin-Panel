@@ -1,0 +1,47 @@
+<div class="products-container">
+    <div class="products-header">
+        <div class="header-image">
+            <div class="blue-background-block"></div>
+            <img src="../../../../../assets/products-header.png" class="picture">
+            <div class="logo">
+                <img src="../../../../../assets/products-logo.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="products-items">
+        <div class="products-title-container">
+            <span class="products-title">PRODUCTS</span>
+            <span class="products-title-name">App Products</span>
+        </div>
+        <div class="product-cards-container">
+            <div class="search-container">
+                <div class="search-block">
+                    <img src="../../../../../assets/search.svg" class="search-icon">
+                    <input type="text" placeholder="Search users by name, id" (input)="onInputChange()" [formControl]="searchInput">
+                </div>
+                <button mat-raised-button class="product-btn">New Product</button>
+            </div>
+            <div class="card-container">
+                <div class="card" *ngFor="let product of products">
+                    <div class="card-logo">
+                        <img [src]="product.imgUrl" class="logo-picture">
+                    </div>
+                    <div class="card-text-container">
+                        <span class="card-title">{{product.title}}</span>
+                        <span class="card-text">{{product.text}}</span>
+                    </div>
+                    <div class="card-icons-container">
+                        <div class="updated-container">
+                            <img src="../../../../../assets/ic_access_time_24px.svg" alt="">
+                            <span class="card-info-text">Updated 2 hr ago</span>
+                        </div>
+                        <div class="downloads-container">
+                            <img src="../../../../../assets/ic_get_app_24px.svg" alt="">
+                            <span class="card-info-text">594 Downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

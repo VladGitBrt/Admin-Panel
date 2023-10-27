@@ -1,0 +1,270 @@
+.profile-container {
+  width: 100%;
+  display: flex;
+}
+.profile-picture-container,
+.profile-info-container {
+  padding: 26px 0px 0px 10px;
+}
+.profile-info-container {
+  margin-left: 10px;
+}
+.upload-picture-container {
+  width: 375px;
+  height: 249px;
+  background: #ffffff;
+  box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05),
+    0px 1px 3px rgba(63, 63, 68, 0.15);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.upload-picture-info,
+.upload-picture-actions {
+  width: 100%;
+}
+.upload-picture-info {
+  height: 100%;
+  display: flex;
+}
+.upload-picture-actions {
+  height: 80px;
+  border-top: 1px solid#e4e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.upload-picture-title,
+.upload-picture-img {
+  flex: 1;
+  height: 100%;
+}
+.profile-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  margin: 24px 0px 0px 24px;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.06px;
+  color: #212529;
+}
+.profile-information {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.05px;
+  color: #9ea0a5;
+  margin: 10px 0px 0px 24px;
+  text-align: start;
+}
+.upload-picture-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 13px;
+}
+.remove-btn,
+.upload-btn {
+  width: 147px;
+  height: 40px;
+  border: none;
+  background-color: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.upload-btn::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.upload-btn::before {
+  content: "Upload Picture";
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #00b4d8;
+  border-radius: 4px;
+  background-color: white;
+  padding: 12px;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.upload-btn:hover::before {
+  background-color: #00b4d8;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+.upload-btn:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.remove-btn {
+  color: #425a70;
+  transition: 0.2s linear;
+}
+.remove-btn:hover {
+  color: white;
+  background-color: #425a70;
+  transition: 0.2s linear;
+}
+.basic-profile-container,
+.notifications-container {
+  width: 910px;
+  background: #ffffff;
+  box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05),
+    0px 1px 3px rgba(63, 63, 68, 0.15);
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+.basic-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.05px;
+  color: #3a3b3f;
+  margin-left: 24px;
+}
+.basic-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #66788a;
+  margin-left: 16px;
+}
+.basic-info-container {
+  width: 100%;
+  height: 71px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e4e7eb;
+}
+.profile-input {
+  width: 328px;
+  height: 56px;
+  border-radius: 4px;
+  padding: 0px;
+}
+.profile-form-container,
+.profile-checkbox-form-container {
+  display: flex;
+  width: 80%;
+  margin: 24px 0px 25px 24px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.save-btn {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 152px;
+  height: 40px;
+  outline: none;
+  background: #00b4d8;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  transition: 0.2s ease-in-out;
+  margin: 24px 0px 24px 24px;
+}
+.save-disable-btn {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 152px;
+  height: 40px;
+  outline: none;
+  background: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: lightgray;
+  border: none;
+  transition: 0.2s ease-in-out;
+  margin: 24px 0px 24px 24px;
+}
+.notifications-container {
+  margin-top: 29px;
+}
+.profile-checkbox-form-container {
+  display: flex;
+}
+.notifications-block,
+.messages-block {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.notifications-title,
+.messages-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.05px;
+  color: #3a3b3f;
+}
+.label-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 9px;
+}
+.sub-label-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #66788a;
+}
+.checkbox-input {
+  width: 18px;
+  height: 18px;
+}
+.label-container {
+  display: flex;
+  align-items: flex-start;
+}

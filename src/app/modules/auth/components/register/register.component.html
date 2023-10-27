@@ -1,0 +1,62 @@
+<div class="login-container">
+    <div class="login-window">
+        <div class="login-form-container">
+            <div class="sign-up-container">
+                <button mat-button routerLink="/auth/login" class="go-back-container"><img src="../../../../../assets/Path.svg" alt=""> <span class="go-back"> Go Back</span> </button>
+                <p class="sign-up-link">Have an account? <a routerLink="/auth/login">Sign in</a> </p>
+            </div>
+            <div class="form-container">
+                <div>
+                    <p class="form-header">Sign up to Angular</p>
+                    <p class="form-text">Sign up on our platform</p>
+                </div>
+                <form [formGroup]="registerForm" (submit)="registerUser()">
+                    <input type="text" class="sign-in-input" placeholder="First Name" formControlName="firstName">
+                    <input type="text" class="sign-in-input" placeholder="Last Name" formControlName="lastName">
+                    <input type="text" class="sign-in-input" placeholder="Email Address" formControlName="email">
+                    <div class="error-container" *ngIf="registerForm.controls['email'].touched && !registerForm.controls['email'].valid" >
+                        <div class="error-handler" *ngIf="!registerForm.controls['email'].value">
+                            Your email is not correct
+                        </div>
+                    </div>
+                    <input type="text" class="sign-in-input" placeholder="Password" formControlName="password" minlength="8" type="password">
+
+                <div class="error-container" *ngIf="registerForm.controls['password'].touched && !registerForm.controls['password'].valid">
+                    <div class="error-handler" *ngIf="!registerForm.controls['password'].value || registerForm.controls['password'].hasError('minlength')">
+                        Your password must ba at least 8 characters
+                    </div>
+                    <div class="error-handler" *ngIf="registerForm.controls['password'].hasError('noAlphabeticCharacters')">
+                        Your password must include an alphabetic character (A-Z)
+                    </div>
+                    <div class="error-handler" *ngIf="registerForm.controls['password'].hasError('noNumericCharacters')">
+                        Your password must include a numeric character (0-9)
+                    </div>
+                    <div class="error-handler" *ngIf="registerForm.controls['password'].hasError('noSpecialCharacters')">
+                        Your character must include a special character
+                    </div>
+                </div>  
+                    <input type="text" class="sign-in-input" placeholder="Confirm password" formControlName="userRePassword" type="password">
+                    <div class="error-container" *ngIf="registerForm.controls['userRePassword'].touched && !registerForm.controls['userRePassword'].valid">
+                        <div class="error-handler" *ngIf="registerForm.controls['userRePassword'].value !== registerForm.controls['password'].value">
+                            Your passwords does not match
+                        </div>
+                    </div>
+                    <div class="terms-agree">
+                        <div class="terms-pos">
+                            <input type="checkbox" class="terms-checkbox" formControlName="userTerms">
+                            <p class="form-text">I have read the <b><u>Terms and Conditions</u></b></p>
+                        </div>
+                        <div class="error-container" *ngIf="registerForm.controls['userTerms'].value == false && registerForm.controls['userTerms'].touched">
+                            <div class="error-handler" >
+                                You shoud read and agree with our terms and conditions
+                            </div>
+                        </div>
+                    </div>
+                    <button class="register-btn" type="submit" mat-stroked-button (submit)="registerUser()" [disabled]="!registerForm.valid || registerForm.value.userTerms === false">SIGN UP NOW</button>
+                </form>
+            </div>
+        </div>
+        <div class="login-pic"></div>
+    </div>
+</div>
+

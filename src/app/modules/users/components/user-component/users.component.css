@@ -1,0 +1,99 @@
+.users-container {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input {
+  width: 620px;
+  height: 34px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.05px;
+}
+.search-block {
+  width: 620px;
+  height: 36px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px 6px 10px;
+  border-radius: 6px;
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px 0px 0px;
+}
+.search-container {
+  width: 100%;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.product-btn {
+  background-color: #00b4d8;
+  color: white;
+  width: 140px;
+  height: 45px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-user-text {
+  margin-left: 8.5px;
+}
+.table-container {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  box-shadow: none;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 15%;
+}
+.mat-elevation-z8 {
+  box-shadow: none;
+  border-radius: 5px;
+}
+.list-item-btn {
+  width: 120px;
+  height: 40px;
+  background-color: #00b4d8;
+  color: white;
+  margin: 10px 0px 10px 0px;
+}
+.th-action {
+  text-align: right;
+}
+.td-action {
+  width: 260px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0px !important;
+}

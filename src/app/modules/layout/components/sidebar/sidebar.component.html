@@ -1,0 +1,13 @@
+<nav>
+    <div class="account">
+        <div class="profile-pic">
+            ST
+        </div>
+        <p class="user-name">Sample User</p>
+        <div class="divider"></div>
+    </div>
+    <button mat-button class="products-button" [routerLinkActive]="['products-button-active']" routerLink="dashboard"><mat-icon class="shoping-icon">dashboard</mat-icon><span class="products-text">Dashboard</span></button>
+    <button mat-button class="products-button" [routerLinkActive]="['products-button-active']" routerLink="users"><mat-icon class="shoping-icon">group</mat-icon><span class="products-text">Users</span></button>
+    <button mat-button class="products-button" [routerLinkActive]="['products-button-active']" routerLink="profile"><mat-icon class="shoping-icon">lock</mat-icon><span class="products-text">Profile</span></button>
+    <button mat-button class="products-button" [routerLinkActive]="['products-button-active']" routerLink="products"><mat-icon class="shoping-icon">photo</mat-icon><span class="products-text">Products</span></button>
+</nav>

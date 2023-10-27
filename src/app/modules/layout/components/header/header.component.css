@@ -1,0 +1,108 @@
+.header {
+  background-color: #00b4d8;
+  color: white;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-group {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.product-list-container {
+  height: calc(100% - 64px);
+  background-color: #f2f2f2;
+  display: flex;
+}
+p {
+  margin: 0px;
+}
+nav {
+  width: 270px;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.account {
+  width: 100%;
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  background-color: #f6f9fd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 20px;
+}
+.user-name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: #e4e7eb;
+}
+.nav-container {
+  width: 270px;
+  height: 100%;
+}
+.products-button {
+  width: 90%;
+  border-radius: 4px;
+  margin: 10px 0px 0px 0px;
+  box-shadow: inset 3px 0px 0px #0d7185;
+  display: flex;
+  height: 46px;
+  align-items: center;
+  background: #f6f9fd;
+}
+.products-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+.shoping-icon {
+  color: #66788a;
+  margin-right: 10px;
+}
+.products-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.products {
+  width: 98%;
+  height: 95%;
+  background-color: white;
+  border-radius: 4px;
+}

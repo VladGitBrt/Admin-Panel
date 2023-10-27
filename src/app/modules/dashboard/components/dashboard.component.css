@@ -1,0 +1,206 @@
+.dashboard-container {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card-container,
+.graph-container {
+  width: 100%;
+}
+.card-container {
+  height: 200px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.graph-container {
+  border-radius: 0px 0px 4px 4px;
+  background-color: white;
+}
+.graph-header-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.05px;
+  color: #3a3b3f;
+}
+#graph {
+  height: 380px;
+  width: 100%;
+}
+.graph-header {
+  width: calc(100% - 40px);
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px 4px 0px 0px;
+}
+.graph-footer {
+  width: calc(100% - 30px);
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e4e7eb;
+}
+.graph-footer-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.05px;
+  color: #00b4d8;
+}
+.card,
+.card-blue {
+  height: 152px;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+}
+.card-blue {
+  background-color: #00b4d8;
+  color: white;
+}
+.card-text {
+  flex: 3;
+  padding: 0px 15px 0px 15px;
+}
+.card-icon {
+  display: flex;
+  flex: 1;
+  align-items: top;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.card-icon-container-red,
+.card-icon-container-green,
+.card-icon-container-blue,
+.card-icon-container-transparent {
+  width: 64px;
+  height: 64px;
+  background-color: #ec4c47;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-icon-container-green {
+  background-color: #47b881;
+}
+.card-icon-container-blue {
+  background-color: #1070ca;
+}
+.card-icon-container-transparent {
+  background-color: transparent;
+}
+.card-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #66788a;
+}
+.card-title-blue {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+.card-value-blue {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.06px;
+  margin: 0px 0px 40px 0px;
+  color: white;
+}
+.card-value {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.06px;
+  color: #212529;
+  margin: 0px 0px 40px 0px;
+}
+.card-stat {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.0428571px;
+  color: #66788a;
+}
+.card-stat-blue {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.0428571px;
+  color: white;
+}
+.stat-number-down-blue {
+  color: white;
+}
+.stat-number-down {
+  color: #bf0e08;
+}
+.money-icon {
+  transform: scale(2);
+}
+.stat-number-up {
+  color: #47b881;
+}
+.card-mat-icon {
+  transform: scale(1.5);
+  color: white;
+}
+.progress-bar {
+  width: 95%;
+  height: 4px;
+  background-color: #e4e7eb;
+  border-radius: 3px;
+}
+.progress-fill {
+  width: 74%;
+  height: 4px;
+  background-color: #1070ca;
+  border-radius: 3px;
+}
+.card-progress-bar {
+  height: 152px;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.card-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

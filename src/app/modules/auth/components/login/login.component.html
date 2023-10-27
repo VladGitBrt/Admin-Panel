@@ -1,0 +1,47 @@
+<div class="login-container">
+    <div class="login-window">
+        <div class="login-form-container">
+            <div class="form-container">
+                <div class="sign-up-container">
+                    <p class="sign-up-link">Don`t have an account? <a routerLink="/auth/register"> Sign up</a></p>
+                </div>
+                <div>
+                    <p class="form-header">Sign in Angular</p>
+                    <p class="form-text">Sign in our platform</p>
+                </div>
+                <form action="GET" [formGroup]="loginForm" (submit)="loginUser()">
+                    <input type="text" class="sign-in-input" placeholder="Email" formControlName="username">
+                    <div class="error-container" *ngIf="loginForm.controls['username'].touched && !loginForm.controls['username'].valid">
+                        <div class="error-handler" *ngIf="!loginForm.controls['username'].value || loginForm.controls['username'].hasError('minlength')">
+                            Your username must be at least 6 characters
+                        </div>
+                    </div>
+                    
+                    <input type="text" class="sign-in-input" placeholder="Password" formControlName="password" type="password">
+                    <div class="error-container" *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].valid" >
+                        <div class="error-handler" *ngIf="!loginForm.controls['password'].value || loginForm.controls['password'].hasError('minlength')">
+                            Your password must ba at least 8 characters
+                        </div>
+                        <div class="error-handler" *ngIf="loginForm.controls['password'].hasError('noAlphabeticCharacters')">
+                            Your password must include an alphabetic character (A-Z)
+                        </div>
+                        <div class="error-handler" *ngIf="loginForm.controls['password'].hasError('noNumericCharacters')">
+                            Your password must include a numeric character (0-9)
+                        </div>
+                        <div class="error-handler" *ngIf="loginForm.controls['password'].hasError('noSpecialCharacters')">
+                            Your character must include a special character
+                        </div>
+                    </div>  
+                    <button mat-stroked-button class="login-btn"  (submit)="loginUser()" [disabled]="!loginForm.valid">SIGN IN</button>
+                    <div class="error-container" *ngIf="!successLogin">
+                        <div class="error-handler">
+                            Password or name are not found
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="login-pic">
+        </div>
+    </div>
+</div>
